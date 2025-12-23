@@ -8,7 +8,7 @@
     {
       "src": "client/client/package.json",
       "use": "@vercel/static-build",
-      "options": {
+      "config": {
         "distDir": "client/client/dist"
       }
     }
