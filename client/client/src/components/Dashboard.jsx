@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function Dashboard() {
+function Dashboard() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
@@ -40,3 +40,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
+export default Dashboard;
