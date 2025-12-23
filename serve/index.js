@@ -17,7 +17,7 @@ mongoose
   .catch((err) => console.log("Databse Connection Error"));
 
 // Sign-Up
-app.post("/api/register", async (req, res) => {
+app.post("/register", async (req, res) => {
   try {
     const { email, password } = req.body;
     const hassedPassword = await bcrypt.hash(password, 10);
@@ -30,7 +30,7 @@ app.post("/api/register", async (req, res) => {
 });
 
 // Login
-app.post("/api/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -65,7 +65,7 @@ const verifyToken = (req, res, next) => {
 };
 
 // Dashboard
-app.get("/api/dashboard", verifyToken, (req, res) => {
+app.get("/dashboard", verifyToken, (req, res) => {
   res.json({ message: `Welcome to Dashboard, User Id: ${req.userid}` });
 });
 
